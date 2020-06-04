@@ -15,7 +15,13 @@
         <img :src='image'>
       </div>
       <div class='product-info'>
-        <h1>{{ product }}</h1>
+        <h1 v-if='onSale'>Now on Sale!</h1>
+        <h2>{{ product }}</h2>
+        <p v-if='inventory > 100'>In Stock</p>
+        <p v-else-if='inventory <= 100 && inventory > 0'>
+          Almost sold out
+        </p>
+        <p v-else>Out of Stock</p>
         <div class='product-description'>
           <p>{{ description }}</p>
         </div>

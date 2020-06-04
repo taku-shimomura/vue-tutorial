@@ -4,6 +4,8 @@ var app = new Vue({
       product: 'Socks',
       image: './assets/vmSocks-green.jpg',
       description: 'green socks',
-      link: 'https://jp.vuejs.org'
+      link: 'https://jp.vuejs.org',
+      onSale: true,
+      inventory: 1000
   }
 })
